@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>花之魅-购物车</title>
+		<link rel="shortcut icon" href="ico.ico" />
+		<link href="../css/bootstrap.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+	      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+		<link rel="stylesheet" href="../css/font-awesome.css">
+		<link rel="stylesheet" href="../css/Mymodel.css">
+		<link rel="stylesheet" type="text/css" href="../css/news.css" />
+		<!--js....-->
+		<script src="../js/jquery-1.11.3.min.js"></script>
+		<script src="../js/bootstrap.js"></script>
+	</head>
+
+	<body>
+		<i id="zhezhao"><img src="../img/timg.gif"/></i>
+		<div class="le header">
+			<div class="container">
+				<div class="row logo">
+					<div class="col-sm-12">
+						<a href="index.html"><img src="../img/logo.png"></a>
+						<a class="pull-right" data-toggle="modal" data-target="#wechats">关注微信 <span class="fa fa-wechat"></span><i></i></a>
+						<a href="http://service.weibo.com/share/share.php?url=" target="_blank" class="pull-right">分享到微博 <span class="fa fa-weibo"></span></a>
+						<div class="modal fade" id="wechats" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<img src="../img/wechat.jpg" />
+							<i class="fa fa-close" data-dismiss="modal"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--导航栏 active表示本页面-->
+		<div class="le naver">
+			<i class="visible-xs mbl_btn">
+				<div id="mbl_round"></div>
+			</i>
+			<div class="container mbl_nav">
+				<ul class="row">
+					<nav class="navbar navbar-default">
+						<div class="container-fluid">
+							<ul class="nav navbar-nav">
+								<li>
+									<a href="../index.html">首页<span class=" fa fa-indent pull-right mbl_nav_fa visible-xs"></span></a>
+								</li>
+								<li>
+									<a href="product.html">产品分类<span class=" fa fa-book pull-right mbl_nav_fa visible-xs"></span></a>
+								</li>
+								<li>
+									<a href="HelpMePickTheFlowers.html">帮我选花<span class=" fa fa-coffee pull-right mbl_nav_fa visible-xs"></span></a>
+								</li>
+								<li>
+									<a href="romanceFlower.html">浪漫花语<span class=" fa fa-comment pull-right mbl_nav_fa visible-xs"></span></a>
+								</li>
+								<li>
+									<a href="distributionScope.html">配送范围<span class=" fa fa-fighter-jet pull-right mbl_nav_fa visible-xs"></span></a>
+								</li>
+								<li>
+									<a href="MoreNews.html">新闻咨询<span class=" fa fa-space-shuttle pull-right mbl_nav_fa visible-xs"></span></a>
+								</li>
+								<li>
+									<a href="BrandStory.html">品牌故事<span class=" fa fa-newspaper-o pull-right mbl_nav_fa visible-xs"></span></a>
+								</li>
+								<li class="pull-right last">
+									<a class="active">购物车<span class="badge pull-right" id="readshop">0</span><span class=" fa fa-shopping-cart pull-right mbl_nav_fa hidden-xs"></span></a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</ul>
+			</div>
+		</div>
+		<!--header End -->
+		<!--section Start-->
+		<div class="le section_first">
+			<div class="le title">
+				<ol class="breadcrumb container">
+					<li>
+						<a href="../index.html">首页</a>
+					</li>
+					<li class="active">购物车</li>
+				</ol>
+			</div>
+			<div class="container">
+				<div class="row dddrop">
+					<p class="top"><i>温馨提示：1.购物车中的商品无法保留库存，请及时结算。2.商品的价格和库存将以订单提交时为准</i><span class="fa fa-close pull-right" id="tishi"></span></p>
+					<div class="col-xs-12 table-responsive ssshopping">
+						<table class="shoppingbox table table-condensed text-center table-hover">
+							<thead>
+								<tr>
+									<td>商品名称</td>
+									<td>单价</td>
+									<td>使用积分</td>
+									<td>数量</td>
+									<td>赠送积分</td>
+									<td>小计</td>
+									<td>操作</td>
+								</tr>
+							</thead>
+							<tbody class="Table">
+								<tr style="line-height:70px;">
+									<td>
+										<img src="../img/flowers_index2.png" width="70px" />
+										<span>温馨母亲节康乃馨66朵装</span>
+									</td>
+									<td class="danjia"><span>￥<em>399.00</em></span></td>
+									<td><span>0.00</span></td>
+									<td class="tdNum"><span><input type="text" value="1" class="Num"> 件</span></td>
+									<td class="tdJf"><span>39.9</span></td>
+									<td class="tdXiaoji"><span>1</span></td>
+									<td class="del"><span class="fa fa-trash-o"></span></td>
+								</tr>
+								<tr style="line-height:70px;">
+									<td>
+										<img src="../img/flowers_index1.png" width="70px" />
+										<span>暖心母亲节康乃馨33朵装</span>
+									</td>
+									<td class="danjia"><span>￥<em>99</em></span></td>
+									<td><span>0.00</span></td>
+									<td class="tdNum"><span><input type="text" value="1" class="Num"> 件</span></td>
+									<td class="tdJf"><span>9.99</span></td>
+									<td class="tdXiaoji"><span>2</span></td>
+									<td class="del"><span class="fa fa-trash-o"></span></td>
+								</tr>
+								<tr style="line-height:70px;">
+									<td>
+										<img src="../img/img/Hua4.png" width="70px" />
+										<span>妖艳贱货蓝玫瑰999朵装</span>
+									</td>
+									<td class="danjia"><span>￥<em>9999.00</em></span></td>
+									<td><span>0.00</span></td>
+									<td class="tdNum"><span><input type="text" value="1" class="Num"> 件</span></td>
+									<td class="tdJf"><span>999.9</span></td>
+									<td class="tdXiaoji"><span>3</span></td>
+									<td class="del"><span class="fa fa-trash-o"></span></td>
+								</tr>
+								<tr style="line-height:70px;">
+									<td>
+										<img src="../img/Hua2.png" width="70px" />
+										<span>热情洋溢红玫瑰66朵装</span>
+									</td>
+									<td class="danjia"><span>￥<em>666.00</em></span></td>
+									<td><span>0.00</span></td>
+									<td class="tdNum"><span><input type="text" value="1" class="Num"> 件</span></td>
+									<td class="tdJf"><span>66.6</span></td>
+									<td class="tdXiaoji"><span>4</span></td>
+									<td class="del"><span class="fa fa-trash-o"></span></td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="7">
+										<span class="fa fa-close pull-left delAll" id="clearshop"> 清空购物车</span>
+										<p class="text-right">
+											<i>商品数量总计：<em id="allNum">2</em>件 </i>
+											<span class="allJf"> 赠送积分总计：<em>422</em>分 </span>
+											<code> 商品总额：￥<em class="allMoney">422.00</em></code>
+										</p>
+									</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+					<div class="pull-right text-right first">当前享受的优惠: · 相宜本草满99减10<br />· 全站满98元免运费</div>
+					<div class="pull-right text-right">
+						<button class="btn pull-right">去结算</button>
+						<span class="fa fa-shopping-cart pull-right"> 继续购物</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--section End&&footer Start-->
+		<div class="le bottomer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 txts">
+						<p>
+							<a href="tel:15123090305" class="pull-left"><span class="fa fa-phone"></span> 151 2309 0305</a>
+							<a href="tel:15123090305" class="pull-right"><span class="fa fa-envelope-o"></span> flowers@163.com</a>
+						</p>
+						<p class="visible-lg">
+							<i></i><span>工作时间：周一至周五9:00-22:00</span><i></i>
+						</p>
+						<ul class="nav-justified hidden-xs">
+							<li>
+								<a href="index.html" class="active">首页</a>
+							</li>
+							<li>
+								<a>产品分类</a>
+							</li>
+							<li>
+								<a>帮我选花</a>
+							</li>
+							<li>
+								<a>浪漫花语</a>
+							</li>
+							<li>
+								<a>配送范围</a>
+							</li>
+							<li>
+								<a>新闻咨询</a>
+							</li>
+							<li>
+								<a>品牌故事</a>
+							</li>
+						</ul>
+						<p>Copright 2016-2016.All rights reserved.<br />技术支持：web7_6组</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="fa fa-paper-plane-o hidden-xs" id="returntop"></button>
+		<script type="text/javascript" src="../js/Mymodel.js"></script>
+		<script type="text/javascript" src="../js/news.js"></script>	</body>
+		<script type="text/javascript" src="../js/shoppingcar.js" ></script>
+
+</html>

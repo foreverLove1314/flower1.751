@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>花之魅-配送范围</title>
+		<link rel="shortcut icon" href="../ico.ico"/>
+		<link href="../css/bootstrap.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+	      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	    <!--[if IE 8]>
+			<style>
+				.resultBox,.disText{
+					width: 1175px;
+					margin: 0 auto;
+				}
+			</style>
+		<![endif]-->
+		<link rel="stylesheet" href="../css/font-awesome.css">
+		<link rel="stylesheet" href="../css/Mymodel.css">
+		<link rel="stylesheet" href="../css/distributionScope.css" />
+		<!--js....-->
+		
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=A4749739227af1618f7b0d1b588c0e85"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=A4749739227af1618f7b0d1b588c0e85"></script>
+		<!-- 加载百度地图样式信息窗口 -->
+		<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+		<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+		<!-- 加载城市列表 -->
+		<script type="text/javascript" src="http://api.map.baidu.com/library/CityList/1.2/src/CityList_min.js"></script>
+		<script type="text/javascript" src="../js/distributionScope.js" ></script>
+		
+		<script src="../js/jquery-1.11.3.min.js"></script>
+		<script src="../js/bootstrap.js"></script>
+		
+	</head>
+
+	<body>
+		<i id="zhezhao"><img src="../img/timg.gif"/></i>
+		<div class="le header">
+			<div class="container">
+				<div class="row logo">
+					<div class="col-sm-12">
+						<a href="../index.html"><img src="../img/logo.png"></a>
+						<a class="pull-right" data-toggle="modal" data-target="#wechats">关注微信 <span class="fa fa-wechat"></span><i></i></a>
+						<a href="http://service.weibo.com/share/share.php?url=" target="_blank" class="pull-right">分享到微博 <span class="fa fa-weibo"></span></a>
+						<div class="modal fade" id="wechats" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<img src="../img/wechat.jpg" />
+							<i class="fa fa-close" data-dismiss="modal"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--导航栏 active表示本页面-->
+		<div class="le naver">
+			<i class="visible-xs mbl_btn">
+				<div id="mbl_round"></div>
+			</i>
+			<div class="container mbl_nav">
+				<ul class="row">
+					<nav class="navbar navbar-default">
+						<div class="container-fluid">
+							<ul class="nav navbar-nav">
+								<li><a href="../index.html">首页<span class=" fa fa-indent pull-right mbl_nav_fa visible-xs"></span></a></li>
+								<li><a href="product.html">产品分类<span class=" fa fa-book pull-right mbl_nav_fa visible-xs"></span></a></li>
+								<li><a href="HelpMePickTheFlowers.html">帮我选花<span class=" fa fa-coffee pull-right mbl_nav_fa visible-xs"></span></a></li>
+								<li><a href="romanceFlower.html">浪漫花语<span class=" fa fa-comment pull-right mbl_nav_fa visible-xs"></span></a></li>									
+								<li><a href="distributionScope.html" class="active">配送范围<span class=" fa fa-fighter-jet pull-right mbl_nav_fa visible-xs"></span></a></li>
+								<li><a href="MoreNews.html">新闻咨询<span class=" fa fa-space-shuttle pull-right mbl_nav_fa visible-xs"></span></a></li>
+								<li><a href="BrandStory.html">品牌故事<span class=" fa fa-newspaper-o pull-right mbl_nav_fa visible-xs"></span></a></li>
+								<li class="pull-right last"><a href="../htmls/shoppingcar.html">购物车<span class="badge pull-right" id="readshop">0</span><span class=" fa fa-shopping-cart pull-right mbl_nav_fa hidden-xs"></span></a></li>
+							</ul>							
+						</div>
+					</nav>
+				</ul>
+			</div>
+		</div>
+		<!--header End -->
+		<hr class="le visible-xs" />
+		<div class="le banner hidden-xs">
+			<img src="../img/timg.jpg" width="100%"/>
+		</div>
+		<!--section Start-->
+		<div class="le section_first">
+			<div class="Map">
+			   	<div class="container">
+			   		<div class="row">
+			   			<div class="col-lg-10 col-md-12 col-xs-12 col-sm-12 col-lg-offset-1 resultBox">
+			   				<div id="l-map"></div>
+							<div id="result">
+								<button id="open" class="btn btn-danger">打开</button>
+								<button id="close" class="btn btn-warning">关闭</button>
+							</div>
+							<!--城市列表-->
+							<div class="sel_container"><strong id="curCity">重庆市</strong> [<a id="curCityText" href="javascript:void(0)">更换城市</a>]</div>
+							<div class="map_popup" id="cityList" style="display:none;">
+								<div class="popup_main">
+									<div class="title">城市列表</div>
+									<div class="cityList" id="citylist_container"></div>
+									<button id="popup_close"></button>
+								</div>
+							</div>
+			   			</div>
+			   		</div>
+			   	</div>
+			   </div>
+				<div class="disText">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-10 col-md-12 col-xs-12 col-sm-12 col-lg-offset-1">
+								<div class="titleBg">
+									配送范围费用
+								</div>
+								<div class="introduceText">
+									<p><em>一、关于配送时间说明：</em></p>
+									<p class="textIndent">因城市交通状况随时变化，原则上我们不承诺“几点几分”这样很具体的时间送达，但我们承诺类似“几月几日上午、下午、晚上或几点以前”这样的时间送达。但如您确有特殊要求，可在“特殊要求”栏内注明，我们将大限度满足你的时间要求。但如确有特殊原因：如收花人联系不到、城市严重交通问题等，而造成送达时间的延时，我们将不承担赔偿责任，恳请谅解。</p>
+									<p class="textIndent"><em>注：</em>当遇到情人节、母亲节、七夕节、教师节、中秋节、圣诞节等重要节日，由于当天我们的订单量激增，免费配送的订单我们不承诺具体送达时段，但承诺当日内送达。</p>
+									<p><em>二、关于配送费用说明：</em></p>
+									<p class="textIndent">如下表中未列出您要送达的城市，请根据下面标准确定您的配送区域：</p>
+									<p class="textIndent">A、市区：指传统意义上的市区、或城内10公里范围，免费配送。</p>
+									<p class="textIndent">B、郊区：指城内超出10公里外至20公里范围内、或城区边缘地带，收取配送服务费30元。</p>
+									<p class="textIndent">C、远郊及偏远地区：超出市区20公里以外的城市周边地区（或虽未超出20公里范围，但属交通不便地区），收取50元配送费；偏远地区请先咨询客服确认是否能够送达。</p>
+									<p class="textIndent">D、如您不确定您的区域应该按照哪个配送区域范围内收费请具体咨询客服人员。</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+		</div>
+		<!--section End&&footer Start-->
+		<div class="le footer hidden-xs">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 labels">
+						<span><img src="../img/bottom_1.png"> 品类齐全  轻松购物</span>
+						<span><img src="../img/bottom_2.png"> 多仓直发  极速配送</span>
+						<span><img src="../img/bottom_3.png"> 正品行货  精致服务</span>
+						<span><img src="../img/bottom_4.png"> 天天低价  畅选无忧</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="le bottomer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 txts">
+						<p>
+							<a href="tel:15123090305" class="pull-left"><span class="fa fa-phone"></span> 151 2309 0305</a>
+							<a href="tel:15123090305" class="pull-right"><span class="fa fa-envelope-o"></span> 837569141@qq.com</a>
+						</p>
+						<p class="visible-lg">
+							<i></i><span>工作时间：周一至周五9:00-22:00</span><i></i>
+						</p>
+						<ul class="nav-justified hidden-xs">
+							<li>
+								<a href="../index.html" class="active">首页</a>
+							</li>
+							<li><a>产品分类</a></li>
+							<li><a>帮我选花</a></li>
+							<li><a>浪漫花语</a></li>
+							<li><a>配送范围</a></li>
+							<li><a>新闻咨询</a></li>
+							<li><a>品牌故事</a></li>
+						</ul>
+						<p>Copright 2016-2016.All rights reserved.<br />技术支持：死亡之组</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="fa fa-paper-plane-o hidden-xs" id="returntop"></button>
+		<script type="text/javascript" src="../js/Mymodel.js"></script>
+	</body>
+
+</html>

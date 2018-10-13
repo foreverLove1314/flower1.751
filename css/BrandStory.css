@@ -1,0 +1,119 @@
+
+.BrandStory{
+	height: auto;
+	border-bottom: 1px solid #CCCCCC;
+}
+.BrandStory > p{
+	font-size: 30px;
+	line-height: 60px;
+	text-align: center;
+	color: #999;
+}
+.JianJie{
+	height: auto;
+}
+.JianJie > img{
+	width: 600px;
+	display: block;
+	margin: 30px auto;
+}
+.WenZi{
+	height: auto;
+	
+}
+.WenZi p{
+	text-indent: 2em;
+	font-size: 16px;
+	line-height: 25px;
+	color: #666;
+}
+
+.LianXi{
+	margin-top: 50px;
+	height: auto;
+	border-bottom: 1px solid #CCCCCC;
+}
+.LianXi > p{
+	font-size: 30px;
+	line-height: 60px;
+	text-align: center;
+	color: #999;
+}
+.hoh{
+	height: auto;
+}
+.hoh p{
+	font-size: 20px;
+	line-height: 50px;
+	float: left;
+}
+.hoh > div{
+		width: 48%;
+}
+.Div1{
+	height: auto;
+	float: left;
+}
+.Div1 p{
+	margin: 0 8%;
+}
+.Div2{
+	height: auto;
+	float: left;
+}
+.Div2 p{
+	margin: 0 3%;
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+	.hoh > div{
+		width: 100%;
+	}
+	.hoh p{
+		font-size: 16px;
+		line-height: 60px;
+		float: left;
+		/*padding: 0 55px;*/
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.hoh > div{
+		width: 100%;
+	}
+	.hoh p{
+		font-size: 13px;
+		line-height: 50px;
+		float: left;
+	}
+}
+@media only screen and (max-width: 767px){
+	.BrandStory > p{
+		font-size: 20px;
+		line-height: 40px;
+	}
+	.LianXi{
+		margin-top: 0;
+	}
+	.LianXi > p{
+		font-size: 20px;
+		line-height: 40px;
+	}
+	.JianJie > img{
+		width:100%;
+	}
+	.WenZi p{
+		font-size: 12px;
+		line-height: 20px;
+	}
+	.hoh > div{
+		width: 100%;
+	}
+	.hoh p{
+		font-size: 0.5rem;
+		line-height: 50px;
+		float: left;
+		margin: 0;
+	}
+	.sssss{
+		padding-left:4px;
+	}
+}

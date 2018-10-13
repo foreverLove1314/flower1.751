@@ -1,0 +1,52 @@
+
+.XuanHua{
+	height: auto;
+	border-bottom: 1px solid #CCCCCC;
+}
+.XuanHua p{
+	font-size: 30px;
+	line-height: 50px;
+	text-align: center;
+}
+.BiaoQian{
+	padding: 0;
+}
+.ulOne{
+	margin-top: 20px;
+}
+#one,#tow{
+	margin-bottom: 20px;
+}
+#one p{
+	font-size: 16px;
+	text-indent: 2em;
+	color: #666;
+	line-height: 35px;
+}
+#tow p{
+	font-size: 16px;
+	text-indent: 2em;
+	color: #666;
+	line-height: 35px;
+}
+#tow h3{
+	margin-top: 60px;
+}
+
+@media only screen and (max-width:767px ) {
+	#one p{
+		padding-left: 3px;
+		font-size: 12px;
+	}
+	#tow p,b{
+		padding-left: 3px;
+		font-size: 12px;
+	}
+	#tow h3{
+		padding-left: 5px;
+	}
+	.ulOne li a{
+		padding: 15px 15px;
+		
+	}
+}

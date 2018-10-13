@@ -1,0 +1,69 @@
+
+/*主体样式*/
+.content{
+	width: 100%;
+	height: auto;
+}
+.content:before,.content:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.content_title{
+	width: 100%;
+	height: auto;
+	padding:50px 0;
+}
+.content_title p{
+	font-size: 14px;
+	color: #61645a;
+	line-height: 24px;
+	text-indent: 2em;
+	padding-bottom: 18px;
+}
+.zhishuBox{
+	padding-bottom: 20px;
+}
+.zhishu{
+	font-size: 30px;
+	color: rgb(229,102,0);
+	line-height: 80px;
+	text-align: center;
+}
+.zsImg{
+	text-align: center;
+}
+.zsImg img{
+	width: 100%;
+}
+.Table{
+	width: 100%;
+	height: auto;
+	border:1px solid #e2e2e2;	
+	margin-bottom: 20px;
+}
+.Table th{
+	width:70%;
+	height:40px;
+	color: #737373;
+	font-size: 15px;
+	padding-left: 10px;
+	background-color: #f1f1f1;
+}
+.Table tr td{
+	font-size: 12px;
+	color: #737373;
+	padding-left: 10px;
+	line-height: 40px;
+}
+@media only screen and (max-width:767px ) {
+	.Table{
+		width: 100%;
+	}
+	.Table th{
+		width: 10%;
+	}
+	.content_title{
+		padding-bottom:0;
+	}
+}
